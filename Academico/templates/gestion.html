@@ -1,0 +1,60 @@
+{% extends "./base.html" %} 
+{% block body %}
+<div class="row py-4">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <h2>gestion de cursos</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/registrarCurso/" method="POST">{% csrf_token %}
+                    <div class="form-group mb-3">
+                        <input type="text" id="txtCodigo" name="txtCodigo" class="form-control" placeholder="Código"
+                            minlength="6" maxlength="6" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Nombre"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" id="numCreditos" name="numCreditos" class="form-control" min="1" max="9"
+                            value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success text-white">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h2>listado de cursos</h2>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Credito</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for c in cursos %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{c.codigo}}</td>
+                        <td>{{c.nombre}}</td>
+                        <td>{{c.creditos}}</td> 
+                        <td><a href="editarCurso/{{c.codigo}}" class="btn btn-info">Editar</a></td>
+                        <td><a href="eliminarCurso/{{c.codigo}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

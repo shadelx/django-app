@@ -1,4 +1,4 @@
-# Djago CRUD Universiy course application
+# Django CRUD Universiy course application
 
 A simple CRUD app with django framework and bootstrap 
 

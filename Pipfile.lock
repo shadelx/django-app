@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ac1d1994ebfac74ae0204661b98d49019e3543b0dda68b737b2489ade2f5fbc9"
+            "sha256": "4f2b06208bb64cc24fdea423bbb73faecff565b68a6ee000b63d7cf1a85c4170"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.10"
+            "python_version": "3"
         },
         "sources": [
             {
@@ -22,6 +22,7 @@
                 "sha256:9567dfe7bd8d3c8c892227827c41cce860b368104c3431da67a0c5a65a949506"
             ],
             "index": "pypi",
+            "markers": "python_version >= '3.7'",
             "version": "==3.6.0"
         },
         "django": {
@@ -30,6 +31,7 @@
                 "sha256:f2f431e75adc40039ace496ad3b9f17227022e8b11566f4b363da44c7e44761e"
             ],
             "index": "pypi",
+            "markers": "python_version >= '3.8'",
             "version": "==4.1.7"
         },
         "sqlparse": {
@@ -38,6 +40,7 @@
                 "sha256:69ca804846bb114d2ec380e4360a8a340db83f0ccf3afceeb1404df028f57268"
             ],
             "index": "pypi",
+            "markers": "python_version >= '3.5'",
             "version": "==0.4.3"
         },
         "tzdata": {
@@ -46,6 +49,7 @@
                 "sha256:fe5f866eddd8b96e9fcba978f8e503c909b19ea7efda11e52e39494bad3a7bfa"
             ],
             "index": "pypi",
+            "markers": "python_version >= '2'",
             "version": "==2022.7"
         }
     },

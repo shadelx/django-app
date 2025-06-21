@@ -5,9 +5,10 @@ name = "pypi"
 
 [packages]
 asgiref = "==3.6.0"
-django = "==4.1.7"
+django = "==4.2"
 sqlparse = "==0.4.3"
 tzdata = "==2022.7"
+django-jazzmin = "==3.0.1"
 
 [dev-packages]
 
